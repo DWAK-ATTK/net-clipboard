@@ -22,10 +22,11 @@ namespace net_clipboard {
 				Console.WriteLine();
 				return;
 			}
-			UdpClient socket = new UdpClient(5394);
+			int udpPort = 11084;
+			UdpClient socket = new UdpClient(udpPort);
 			socket.BeginReceive(new AsyncCallback(OnUdpDataRecv), socket);
 
-			IPEndPoint target = new IPEndPoint(IPAddress.Parse("10.10.1.255"), 5394);
+			IPEndPoint target = new IPEndPoint(IPAddress.Parse("10.10.1.255"), udpPort);
 
 			Console.WriteLine("Monitoring clipboard and network.  CTL-C to exit.");
 			//	Monitor the clipboard
