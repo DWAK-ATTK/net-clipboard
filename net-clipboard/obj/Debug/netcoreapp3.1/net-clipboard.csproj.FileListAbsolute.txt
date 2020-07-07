@@ -1,0 +1,13 @@
+C:\Users\danwa\source\repos\net-clipboard\net-clipboard\bin\Debug\netcoreapp3.1\net-clipboard.exe
+C:\Users\danwa\source\repos\net-clipboard\net-clipboard\bin\Debug\netcoreapp3.1\net-clipboard.deps.json
+C:\Users\danwa\source\repos\net-clipboard\net-clipboard\bin\Debug\netcoreapp3.1\net-clipboard.runtimeconfig.json
+C:\Users\danwa\source\repos\net-clipboard\net-clipboard\bin\Debug\netcoreapp3.1\net-clipboard.runtimeconfig.dev.json
+C:\Users\danwa\source\repos\net-clipboard\net-clipboard\bin\Debug\netcoreapp3.1\net-clipboard.dll
+C:\Users\danwa\source\repos\net-clipboard\net-clipboard\bin\Debug\netcoreapp3.1\net-clipboard.pdb
+C:\Users\danwa\source\repos\net-clipboard\net-clipboard\obj\Debug\netcoreapp3.1\net-clipboard.csprojAssemblyReference.cache
+C:\Users\danwa\source\repos\net-clipboard\net-clipboard\obj\Debug\netcoreapp3.1\net-clipboard.AssemblyInfoInputs.cache
+C:\Users\danwa\source\repos\net-clipboard\net-clipboard\obj\Debug\netcoreapp3.1\net-clipboard.AssemblyInfo.cs
+C:\Users\danwa\source\repos\net-clipboard\net-clipboard\obj\Debug\netcoreapp3.1\net-clipboard.csproj.CoreCompileInputs.cache
+C:\Users\danwa\source\repos\net-clipboard\net-clipboard\obj\Debug\netcoreapp3.1\net-clipboard.dll
+C:\Users\danwa\source\repos\net-clipboard\net-clipboard\obj\Debug\netcoreapp3.1\net-clipboard.pdb
+C:\Users\danwa\source\repos\net-clipboard\net-clipboard\obj\Debug\netcoreapp3.1\net-clipboard.genruntimeconfig.cache
