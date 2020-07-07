@@ -13,7 +13,7 @@ using Clipboard = WindowsClipboard;
 namespace net_clipboard {
 	class Program {
 
-		private object _lastClipboardContents = null;
+		private static string _lastClipboardContents = null;
 
 
 		static void Main(string[] args) {
@@ -27,24 +27,19 @@ namespace net_clipboard {
 
 			IPEndPoint target = new IPEndPoint(IPAddress.Parse("10.10.1.255"), 5394);
 
+			Console.WriteLine("Monitoring clipboard and network.  CTL-C to exit.");
 			//	Monitor the clipboard
 			while (true) {
 				string clipboardData = Clipboard.GetText();
-				if (!string.IsNullOrWhiteSpace(clipboardData)) {
-
+				if (!string.IsNullOrWhiteSpace(clipboardData) && _lastClipboardContents != clipboardData) {
+					_lastClipboardContents = clipboardData;
+					byte[] messageBytes = Encoding.UTF8.GetBytes(clipboardData);
+					socket.Send(messageBytes, messageBytes.Length, target);
 				}
 
 				Thread.Sleep(250);
 			}
-
-			// send a couple of sample messages:
-			for (int num = 1; num <= 3; num++) {
-				string message = $"Hello from {num}.";
-				byte[] messageBytes = Encoding.UTF8.GetBytes(message);
-				socket.Send(messageBytes, messageBytes.Length, target);
-			}
-
-			Console.ReadKey();
+			//Console.ReadKey();
 		}
 
 
@@ -61,6 +56,8 @@ namespace net_clipboard {
 			// do what you'd like with `message` here:
 			Console.WriteLine("Got " + messageBytes.Length + " bytes from " + source);
 			Console.WriteLine(message);
+			Clipboard.SetText(message);
+			_lastClipboardContents = message;
 
 			// schedule the next receive operation once reading is done:
 			socket.BeginReceive(new AsyncCallback(OnUdpDataRecv), socket);
